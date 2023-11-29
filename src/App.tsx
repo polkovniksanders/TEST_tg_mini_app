@@ -9,6 +9,8 @@ import WebApp from '@twa-dev/sdk'
 function App() {
   const [count, setCount] = useState(0)
 
+    console.log(WebApp)
+
   return (
     <>
       <div>
@@ -29,10 +31,21 @@ function App() {
         </button>
       </div>
       {/*  */}
+        <div className="card">
+            <button onClick={() => WebApp.showConfirm('https://google.com')}>
+                Show Alert
+            </button>
+        </div>
       <div className="card">
-        <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
+          {WebApp.version}
+          {WebApp.platform}
+
+
+
+
+        {/*<button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
             Show Alert
-        </button>
+        </button>*/}
       </div>
     </>
   )
