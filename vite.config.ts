@@ -5,7 +5,7 @@ import basicSsl from '@vitejs/plugin-basic-ssl';
 // https://vitejs.dev/config/
 export default defineConfig({
   //base: "/https://github.com/polkovniksanders/TEST_tg_mini_app/",
-  base: "/TEST_tg_mini_app/",
+  base: "/",
   plugins: [react(), basicSsl()],
   build: {
     outDir: './docs'
